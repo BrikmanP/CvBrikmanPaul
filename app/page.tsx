@@ -42,8 +42,9 @@ export default function CVPage() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-left">
-            <h1 className="text-2xl font-bold text-balance">
-              Brikman Paul Morales
+            <h1 className="text-2xl font-bold text-balance break-words max-w-[200px] sm:max-w-none">
+              Brikman Paul{" "}
+              <span className="block sm:inline">Morales</span>
             </h1>
             <p className="text-muted-foreground">{headerTitle}</p>
           </div>
@@ -299,13 +300,13 @@ export default function CVPage() {
           <div className="h-px bg-border mb-6"></div>
 
           <Card className="p-6">
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              <Button asChild variant="default" size="lg">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center md:items-stretch">
+              <Button asChild variant="default" size="lg" className="w-full md:w-auto">
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=brikmanpaul34@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 justify-center"
                 >
                   <Mail className="w-4 h-4" />
                   Enviar Email
@@ -314,33 +315,24 @@ export default function CVPage() {
 
               {!isPersonalProjects && (
                 <>
-                  <Button asChild variant="outline" size="lg">
+                  <Button asChild variant="outline" size="lg" className="w-full md:w-auto">
                     <a
                       href="https://www.linkedin.com/in/brikmanpaulmorales/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 justify-center"
                     >
                       <Linkedin className="w-4 h-4" />
                       Ver LinkedIn
                     </a>
                   </Button>
 
-                  <PDFExport />
+                  {/* Botón PDF centrado en móviles */}
+                  <div className="flex justify-center w-full md:w-auto">
+                    <PDFExport />
+                  </div>
                 </>
               )}
-
-              <Button asChild variant="outline" size="lg">
-                <a
-                  href="https://github.com/BrikmanP"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Github className="w-4 h-4" />
-                  Ver GitHub
-                </a>
-              </Button>
             </div>
           </Card>
         </motion.section>
