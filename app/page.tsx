@@ -86,60 +86,67 @@ export default function CVPage() {
 
       <main className="container mx-auto px-4 py-12 max-w-5xl">
         {/* Perfil Profesional */}
-        <motion.section {...fadeIn} className="mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-balance">
-            Perfil Profesional
-          </h2>
-          <div className="h-px bg-border mb-6"></div>
-          <p className="text-lg leading-relaxed text-pretty">{cvData.perfil}</p>
-        </motion.section>
+        {cvData.perfil && (
+          <motion.section {...fadeIn} className="mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-balance">
+              Perfil Profesional
+            </h2>
+            <div className="h-px bg-border mb-6"></div>
+            <p className="text-lg leading-relaxed text-pretty">
+              {cvData.perfil}
+            </p>
+          </motion.section>
+        )}
 
         {/* Experiencia Profesional */}
-        <motion.section
-          {...fadeIn}
-          transition={{ delay: 0.1 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4 text-balance">
-            Experiencia Profesional
-          </h2>
-          <div className="h-px bg-border mb-6"></div>
+        {cvData.experiencia && cvData.experiencia.length > 0 && (
+          <motion.section
+            {...fadeIn}
+            transition={{ delay: 0.1 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-balance">
+              Experiencia Profesional
+            </h2>
+            <div className="h-px bg-border mb-6"></div>
 
-          <div className="space-y-8">
-            {cvData.experiencia.map((exp, index) => (
-              <Card key={index} className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="text-xl font-semibold">{exp.titulo}</h3>
-                    {exp.empresa && (
-                      <>
-                        {exp.link ? (
-                          <a
-                            href={exp.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline"
-                          >
-                            {exp.empresa}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{exp.empresa}</p>
-                        )}
-                      </>
-                    )}
+            <div className="space-y-8">
+              {cvData.experiencia.map((exp, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="text-xl font-semibold">{exp.titulo}</h3>
+                      {exp.empresa && (
+                        <>
+                          {exp.link ? (
+                            <a
+                              href={exp.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline"
+                            >
+                              {exp.empresa}
+                            </a>
+                          ) : (
+                            <p className="text-muted-foreground">{exp.empresa}</p>
+                          )}
+                        </>
+                      )}
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      {exp.periodo}
+                    </span>
                   </div>
-                  <span className="text-sm text-muted-foreground">
-                    {exp.periodo}
-                  </span>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {exp.descripcion}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </motion.section>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {exp.descripcion}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </motion.section>
+        )}
 
+        {/* Educación */}
         {cvData.educacion && cvData.educacion.length > 0 && (
           <motion.section
             {...fadeIn}
@@ -165,114 +172,122 @@ export default function CVPage() {
           </motion.section>
         )}
 
-        <motion.section
-          {...fadeIn}
-          transition={{ delay: 0.3 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4 text-balance">
-            Habilidades Técnicas
-          </h2>
-          <div className="h-px bg-border mb-6"></div>
+        {/* Habilidades Técnicas */}
+        {cvData.habilidades_tecnicas && (
+          <motion.section
+            {...fadeIn}
+            transition={{ delay: 0.3 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-balance">
+              Habilidades Técnicas
+            </h2>
+            <div className="h-px bg-border mb-6"></div>
 
-          <div className="space-y-6">
-            {Object.entries(cvData.habilidades_tecnicas).map(
-              ([categoria, habilidades]) => (
-                <div key={categoria}>
-                  <h3 className="text-lg font-semibold mb-3 text-primary">
-                    {categoria}
+            <div className="space-y-6">
+              {Object.entries(cvData.habilidades_tecnicas).map(
+                ([categoria, habilidades]) => (
+                  <div key={categoria}>
+                    <h3 className="text-lg font-semibold mb-3 text-primary">
+                      {categoria}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {habilidades.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1.5 bg-primary/10 text-primary rounded-md text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </motion.section>
+        )}
+
+        {/* Habilidades Blandas */}
+        {cvData.habilidades_blandas && (
+          <motion.section
+            {...fadeIn}
+            transition={{ delay: 0.4 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-balance">
+              Habilidades Blandas
+            </h2>
+            <div className="h-px bg-border mb-6"></div>
+
+            <div className="flex flex-wrap gap-2">
+              {cvData.habilidades_blandas.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm font-medium border border-border hover:bg-muted/80 transition-colors"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {/* Proyectos */}
+        {cvData.proyectos && cvData.proyectos.length > 0 && (
+          <motion.section
+            {...fadeIn}
+            transition={{ delay: 0.5 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-balance">
+              {isPersonalProjects
+                ? "Producciones Musicales"
+                : "Proyectos Destacados"}
+            </h2>
+            <div className="h-px bg-border mb-6"></div>
+
+            <div className="space-y-6">
+              {cvData.proyectos.map((proyecto, index) => (
+                <Card key={index} className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {proyecto.titulo}
                   </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {habilidades.map((skill, index) => (
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {proyecto.descripcion}
+                  </p>
+
+                  {proyecto.titulo.includes("n8n") ? (
+                    <div className="mb-4 p-6 rounded-lg bg-muted/30">
+                      <N8nWorkflow />
+                    </div>
+                  ) : proyecto.imagen ? (
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <Image
+                        src={proyecto.imagen || "/placeholder.svg"}
+                        alt={`Diagrama de ${proyecto.titulo}`}
+                        width={1200}
+                        height={600}
+                        className="w-full h-auto mix-blend-lighten dark:mix-blend-screen"
+                      />
+                    </div>
+                  ) : null}
+
+                  <div className="flex gap-2 flex-wrap">
+                    {proyecto.tecnologias.map((tech, techIndex) => (
                       <span
-                        key={index}
-                        className="px-3 py-1.5 bg-primary/10 text-primary rounded-md text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+                        key={techIndex}
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium border border-primary/20"
                       >
-                        {skill}
+                        {tech}
                       </span>
                     ))}
                   </div>
-                </div>
-              )
-            )}
-          </div>
-        </motion.section>
-
-        <motion.section
-          {...fadeIn}
-          transition={{ delay: 0.4 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4 text-balance">
-            Habilidades Blandas
-          </h2>
-          <div className="h-px bg-border mb-6"></div>
-
-          <div className="flex flex-wrap gap-2">
-            {cvData.habilidades_blandas.map((skill, index) => (
-              <span
-                key={index}
-                className="px-3 py-1.5 bg-muted text-foreground rounded-md text-sm font-medium border border-border hover:bg-muted/80 transition-colors"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Proyectos */}
-        <motion.section
-          {...fadeIn}
-          transition={{ delay: 0.5 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4 text-balance">
-            {isPersonalProjects
-              ? "Producciones Musicales"
-              : "Proyectos Destacados"}
-          </h2>
-          <div className="h-px bg-border mb-6"></div>
-
-          <div className="space-y-6">
-            {cvData.proyectos.map((proyecto, index) => (
-              <Card key={index} className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
-                  {proyecto.titulo}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {proyecto.descripcion}
-                </p>
-
-                {proyecto.titulo.includes("n8n") ? (
-                  <div className="mb-4 p-6 rounded-lg bg-muted/30">
-                    <N8nWorkflow />
-                  </div>
-                ) : proyecto.imagen ? (
-                  <div className="mb-4 rounded-lg overflow-hidden">
-                    <Image
-                      src={proyecto.imagen || "/placeholder.svg"}
-                      alt={`Diagrama de ${proyecto.titulo}`}
-                      width={1200}
-                      height={600}
-                      className="w-full h-auto mix-blend-lighten dark:mix-blend-screen"
-                    />
-                  </div>
-                ) : null}
-
-                <div className="flex gap-2 flex-wrap">
-                  {proyecto.tecnologias.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium border border-primary/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
-        </motion.section>
+                </Card>
+              ))}
+            </div>
+          </motion.section>
+        )}
 
         {/* Contacto */}
         <motion.section
@@ -285,18 +300,17 @@ export default function CVPage() {
 
           <Card className="p-6">
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-           <Button asChild variant="default" size="lg">
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=brikmanpaul34@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2"
-  >
-    <Mail className="w-4 h-4" />
-    Enviar Email
-  </a>
-</Button>
-
+              <Button asChild variant="default" size="lg">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=brikmanpaul34@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4" />
+                  Enviar Email
+                </a>
+              </Button>
 
               {!isPersonalProjects && (
                 <>
