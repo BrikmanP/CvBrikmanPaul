@@ -1,0 +1,74 @@
+{
+  "version": "Frontend Developer",
+  "perfil": "Ingeniero de Sistemas con más de 3 años de experiencia en desarrollo web, especializado en Front-End con React.js y JavaScript (ES6+). Experiencia construyendo SPAs escalables, interfaces accesibles y responsivas, integrando APIs RESTful, gestionando estado con Redux / Context API, y aplicando buenas prácticas de performance y testing (Jest / Testing Library). Acostumbrado a trabajo remoto y metodologías ágiles (Scrum/Kanban). Familiaridad con CI/CD en entornos cloud (Azure).",
+  "experiencia": [
+    {
+      "titulo": "Freelance Frontend Developer",
+      "periodo": "2024 – Actualidad",
+      "descripcion": "Desarrollo aplicaciones web priorizando el Front-End con React.js, Next.js y TypeScript. Implementación de interfaces responsivas, integración con APIs RESTful, y optimización de rendimiento. Enfoque en accesibilidad y mejores prácticas de UX/UI.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Desarrollador Frontend Junior",
+      "periodo": "2022 – 2024",
+      "descripcion": "Desarrollo y mantenimiento de módulos front-end con HTML5, CSS3, JavaScript, Angular y React. Colaboración en equipos ágiles para la entrega de soluciones escalables y mantenibles. Implementación de componentes reutilizables y optimización de rendimiento.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Prácticas Profesionales",
+      "periodo": "2024",
+      "descripcion": "Desarrollo del MVP SaaS para pequeños comercios con Angular, backend en Java/Python, PostgreSQL. Implementación de funcionalidades clave del frontend y colaboración en arquitectura de microservicios.",
+      "empresa": "Igrowker S.L.",
+      "link": "https://igrowker.com"
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Ingeniero de Sistemas",
+      "institucion": "CUN – Corporación Unificada Nacional",
+      "descripcion": null
+    },
+    {
+      "titulo": "Diplomado en Programación Python",
+      "institucion": "Formación especializada en desarrollo con Python",
+      "descripcion": null
+    }
+  ],
+  "habilidades_tecnicas": {
+    "Frontend": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Angular",
+      "HTML5",
+      "CSS3",
+      "TailwindCSS",
+      "Bootstrap"
+    ],
+    "Estado y Testing": ["Redux", "Context API", "Jest", "Testing Library"],
+    "Herramientas": ["Git", "CI/CD", "Azure", "Webpack", "Vite"]
+  },
+  "habilidades_blandas": [
+    "Comunicación efectiva",
+    "Trabajo en equipo",
+    "Resolución de problemas",
+    "Adaptabilidad",
+    "Pensamiento crítico",
+    "Gestión del tiempo"
+  ],
+  "proyectos": [
+    {
+      "titulo": "Migración de Monolítico a Componentes React",
+      "descripcion": "Refactorización completa de aplicación legacy a arquitectura basada en componentes React, mejorando mantenibilidad y rendimiento en un 40%.",
+      "tecnologias": ["React", "TypeScript", "Redux", "Jest"]
+    },
+    {
+      "titulo": "Dashboard Analítico con Next.js",
+      "descripcion": "Desarrollo de dashboard interactivo con visualización de datos en tiempo real, optimizado para performance con SSR y caching estratégico.",
+      "tecnologias": ["Next.js", "React", "TailwindCSS", "Chart.js"]
+    }
+  ]
+}

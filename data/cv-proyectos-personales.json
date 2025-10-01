@@ -1,0 +1,80 @@
+{
+  "version": "Proyectos Personales",
+  "perfil": "Productor Musical apasionado con 10 años de experiencia en la creación de beats, mezcla y masterización. Especializado en producción musical con FL Studio y Steinberg Cubase, diseño gráfico con Photoshop, edición de video avanzada con CapCut, After Effects y Adobe Premiere Pro, y retoque fotográfico profesional con Lightroom. Siempre explorando nuevas técnicas y herramientas para llevar mis producciones al siguiente nivel.",
+  "experiencia": [
+    {
+      "titulo": "Productor Musical & Beatmaker",
+      "periodo": "2010 – Actualidad",
+      "descripcion": "Producción musical profesional con FL Studio y Steinberg Cubase. Creación de beats originales, mezcla y masterización de tracks. Colaboración con artistas independientes y estudios de grabación para producciones de alta calidad.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Diseñador Gráfico & Editor de Video",
+      "periodo": "2010 – Actualidad",
+      "descripcion": "Diseño de portadas de álbumes, flyers y material promocional con Photoshop. Edición avanzada de videos musicales y contenido audiovisual con CapCut, After Effects y Adobe Premiere Pro. Retoque fotográfico profesional con Lightroom para sesiones de artistas.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Experto en DAWs",
+      "periodo": "2010 – Actualidad",
+      "descripcion": "Dominio avanzado de FL Studio y Steinberg Cubase para producción musical. Manejo de plugins VST, síntesis de sonido, sampling, y técnicas de mezcla y masterización profesional.",
+      "empresa": null,
+      "link": null
+    }
+  ],
+  "educacion": [],
+  "habilidades_tecnicas": {
+    "Producción Musical": [
+      "FL Studio",
+      "Steinberg Cubase",
+      "Beatmaking",
+      "Mezcla",
+      "Masterización",
+      "Síntesis de Sonido",
+      "Sampling"
+    ],
+    "Diseño Gráfico": ["Adobe Photoshop", "Diseño de Portadas", "Branding Musical", "Material Promocional"],
+    "Edición de Video": ["CapCut", "Adobe After Effects", "Adobe Premiere Pro", "Motion Graphics", "Color Grading"],
+    "Fotografía": ["Adobe Lightroom", "Retoque Fotográfico", "Corrección de Color", "Edición Profesional"]
+  },
+  "habilidades_blandas": [
+    "Creatividad",
+    "Atención al detalle",
+    "Trabajo bajo presión",
+    "Comunicación efectiva",
+    "Gestión del tiempo",
+    "Adaptabilidad",
+    "Pensamiento crítico",
+    "Aprendizaje continuo"
+  ],
+  "proyectos": [
+    {
+      "titulo": "Producciones Musicales - The House Mental",
+      "descripcion": "Producción de múltiples tracks para artistas del estudio The House Mental. Creación de beats originales, mezcla y masterización profesional. Diseño de portadas y material promocional para los lanzamientos.",
+      "tecnologias": ["FL Studio", "Cubase", "Photoshop", "Lightroom", "Mezcla", "Masterización"]
+    },
+    {
+      "titulo": "Producciones Musicales - Mente y Alma Records",
+      "descripcion": "Colaboración con Mente y Alma Records en la producción de álbumes completos. Beatmaking, arreglos musicales, mezcla y masterización. Edición de videos musicales con After Effects y Premiere Pro.",
+      "tecnologias": ["FL Studio", "Cubase", "After Effects", "Premiere Pro", "CapCut", "Photoshop"]
+    },
+    {
+      "titulo": "Diseño Gráfico & Branding Musical",
+      "descripcion": "Creación de identidad visual para artistas independientes. Diseño de portadas de álbumes, logos, flyers y material promocional con Photoshop. Retoque fotográfico profesional con Lightroom para sesiones de prensa y redes sociales.",
+      "tecnologias": ["Photoshop", "Lightroom", "Branding", "Diseño Gráfico"]
+    },
+    {
+      "titulo": "Edición de Videos Musicales",
+      "descripcion": "Producción audiovisual completa de videos musicales. Edición avanzada con CapCut, After Effects y Adobe Premiere Pro. Motion graphics, efectos visuales, color grading y post-producción profesional.",
+      "tecnologias": ["CapCut", "After Effects", "Premiere Pro", "Motion Graphics", "Color Grading"]
+    },
+    {
+      "titulo": "Automatización de Flujos de Trabajo con n8n",
+      "descripcion": "Actualmente explorando y aprendiendo automatización de procesos con n8n. Creación de workflows inteligentes para optimizar tareas repetitivas, integración de servicios como Google Drive, Slack, Gmail y Google Sheets. Implementación de flujos de aprobación automatizados y notificaciones inteligentes para mejorar la productividad en proyectos creativos.",
+      "tecnologias": ["n8n", "Automatización", "Workflows", "Integraciones", "APIs"],
+      "imagen": "/images/image.png"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "version": "Backend Developer",
+  "perfil": "Ingeniero de Sistemas con más de 3 años de experiencia en desarrollo backend. Especializado en Node.js, Java, y bases de datos relacionales (SQL Server, PostgreSQL, MySQL). Experiencia diseñando y desarrollando APIs RESTful escalables, implementando arquitecturas de microservicios, y aplicando patrones de diseño (SOLID, DDD). Dominio de optimización de consultas SQL, gestión de transacciones, y prácticas de seguridad. Familiaridad con cloud computing (Azure) y CI/CD.",
+  "experiencia": [
+    {
+      "titulo": "Freelance Backend Developer",
+      "periodo": "2019 – Actualidad",
+      "descripcion": "Desarrollo de APIs RESTful robustas con Node.js y Java. Diseño de arquitecturas escalables, optimización de bases de datos SQL/NoSQL, implementación de autenticación y autorización, y despliegue en entornos cloud.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Desarrollador Backend Junior",
+      "periodo": "2022 – Actualidad",
+      "descripcion": "Desarrollo y mantenimiento de servicios backend con Node.js, Java y .NET. Diseño de APIs RESTful, optimización de consultas SQL, implementación de lógica de negocio compleja, y colaboración en equipos ágiles.",
+      "empresa": null,
+      "link": null
+    },
+    {
+      "titulo": "Prácticas Profesionales",
+      "periodo": "2024",
+      "descripcion": "Desarrollo del backend del MVP SaaS para pequeños comercios con Java/Python y PostgreSQL. Implementación de arquitectura de microservicios, diseño de base de datos, y optimización de rendimiento.",
+      "empresa": "Igrowker S.L.",
+      "link": "https://igrowker.com"
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Ingeniero de Sistemas",
+      "institucion": "CUN – Corporación Unificada Nacional",
+      "descripcion": null
+    },
+    {
+      "titulo": "Diplomado en Programación Python",
+      "institucion": "Formación especializada en desarrollo con Python",
+      "descripcion": null
+    }
+  ],
+  "habilidades_tecnicas": {
+    "Lenguajes": ["Node.js", "Java", "C#", "Python", "PHP", "TypeScript"],
+    "Frameworks": [".NET", "Spring Boot", "Express.js", "NestJS"],
+    "Bases de Datos": ["SQL Server", "Oracle", "MySQL", "PostgreSQL", "MongoDB"],
+    "Arquitectura": ["Microservicios", "SOLID", "DDD", "RESTful APIs", "Event-Driven"],
+    "DevOps": ["Azure", "Git", "CI/CD", "Docker", "PowerShell", "Bash"]
+  },
+  "habilidades_blandas": [
+    "Comunicación efectiva",
+    "Trabajo en equipo",
+    "Resolución de problemas",
+    "Adaptabilidad",
+    "Pensamiento crítico",
+    "Gestión del tiempo"
+  ],
+  "proyectos": [
+    {
+      "titulo": "API RESTful Escalable con Node.js",
+      "descripcion": "Diseño e implementación de API escalable con Node.js, Express, autenticación JWT, rate limiting, y base de datos PostgreSQL. Documentación con Swagger y testing automatizado con Jest.",
+      "tecnologias": ["Node.js", "Express", "PostgreSQL", "JWT", "Jest", "Swagger"]
+    },
+    {
+      "titulo": "Microservicios con Java Spring Boot",
+      "descripcion": "Desarrollo de arquitectura de microservicios con Java Spring Boot, comunicación asíncrona con RabbitMQ, y base de datos distribuida. Implementación de patrones CQRS y Event Sourcing.",
+      "tecnologias": ["Java", "Spring Boot", "RabbitMQ", "PostgreSQL", "Docker"]
+    }
+  ]
+}
